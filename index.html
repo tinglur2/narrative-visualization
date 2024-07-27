@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Global EV Sales Analyse</title>
+
+
+    <!-- Custom styles for this template-->
+    <link href="bootstrap.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+    <script type="module" src="main.js"></script>
+
+
+</head>
+
+<body id="page-top">
+
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Topbar -->
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <h1 style="color:rgba(35,34,34,1);">Global EV Sales Analyse</h1>
+            </nav>
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+                <p> Datasource URL:
+                    <a href="https://www.kaggle.com/datasets/patricklford/global-ev-sales-2010-2024" target="_blank">
+                        https://www.kaggle.com/datasets/patricklford/global-ev-sales-2010-2024
+                    </a>
+                </p>
+
+                <!-- Content Row -->
+                <div class="row">
+
+                    <div class="col-xl-12 col-lg-12">
+
+                        <!-- Chart 1 START-->
+                        <div class="card shadow mb-4" id="page1">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">
+                                    Electric vehicle sales by region over time</h6>
+                            </div>
+                            <div class="card-body">
+                                <!-- Page Heading -->
+                                <h1 class="h3 mb-2 text-gray-800">Electric vehicle sales by region over time</h1>
+                                <p class="mb-4">
+                                    Use a stacked bar chart to show the sales of electric vehicles since 2010.
+                                    From the figure, we can see that the global sales of electric vehicles have grown
+                                    very rapidly since 2010.
+                                    The region with the most electric vehicle purchases is China, followed by North
+                                    America and Europe.</p>
+                                <div id="tooltip" class="tooltip-container"></div>
+                                <div class="chart-area" style="height:100%;">
+                                    <svg id="svg1"/>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!-- Chart 1 END-->
+
+                        <!-- Chart 2 START-->
+                        <div class="card shadow mb-4" style="display: none;" id="page2">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Global Electric Vehicle Stock Map
+                                    Distribution</h6>
+                            </div>
+                            <div class="card-body">
+                                <!-- Page Heading -->
+                                <h1 class="h3 mb-2 text-gray-800">Global Electric Vehicle Stock Map Distribution</h1>
+                                <p class="mb-4">
+                                    The electric vehicle stock data of each country at different times is displayed in
+                                    the form of a map.
+                                    The figure shows that since 2015, the countries with the largest share of electric
+                                    vehicle stocks are China and the United States.</p>
+                                <div id="menus" style="margin:15px;">
+
+                                </div>
+                                <div class="chart-area" style="height:100%;">
+                                    <svg id="svg2"/>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Chart 2 END-->
+
+                        <!-- Chart 3 START-->
+                        <div class="card shadow mb-4" style="display: none;" id="page3">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">
+                                    Electric vehicle sales share by powertrain</h6>
+                            </div>
+                            <div class="card-body">
+                                <!-- Page Heading -->
+                                <h1 class="h3 mb-2 text-gray-800">Electric vehicle sales share by powertrain</h1>
+                                <p class="mb-4">BEV is Battery Electric Vehicle. PHEV is Plug-in Hybrid Electric
+                                    Vehicle. FCEV is Fuel Cell Electric Vehicle. EV refers to all electric vehicles (BEV
+                                    + PHEV).
+                                    This figure shows the proportion of electric vehicles with different power systems
+                                </p>
+                                <div id="menus2" style="margin:15px;">
+
+                                </div>
+                                <div class="chart-area" style="height:100%;">
+                                    <svg id="svg3"/>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Chart 3 END-->
+
+                        <div class="">
+                            <a href="#" class="btn btn-primary btn-block" id="prev">
+                                <i class="fab fa-google fa-fw"></i>
+                                prev</a>
+                            <a href="#" class="btn btn-google btn-block" id="next">
+                                <i class="fab fa-google fa-fw"></i>
+                                next</a>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- End of Main Content -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+</div>
+<!-- End of Page Wrapper -->
+
+</body>
+
+</html>
